@@ -1,0 +1,155 @@
+/* Main Container */
+.developer-container {
+  min-height: 100vh;
+  padding: 80px 20px;
+
+  background:
+    linear-gradient(
+      rgba(10, 25, 47, 0.85),
+      rgba(10, 25, 47, 0.85)
+    ),
+    url("../assets/Coding.png");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  font-family: "Segoe UI", sans-serif;
+  color: white;
+}
+
+/* Titles */
+.developer-container h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #60a5fa;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.developer-container h2::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: #38bdf8;
+  margin: 12px auto;
+  border-radius: 5px;
+}
+
+/* Teacher Section */
+.teacher-section {
+  margin-bottom: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Teacher Card */
+.teacher-card {
+  width: 320px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  border: 2px solid #38bdf8;
+}
+
+/* Students Grid */
+.students-grid {
+  max-width: 1200px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 30px;
+}
+
+/* Cards */
+.card {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+
+  border-radius: 20px;
+  padding: 25px;
+  text-align: center;
+
+  transition: all 0.4s ease;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Hover Effect */
+.card:hover {
+  transform: translateY(-10px);
+  border-color: #38bdf8;
+  box-shadow: 0 15px 30px rgba(56, 189, 248, 0.4);
+}
+
+/* Images */
+.card img {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+
+  border-radius: 50%;
+  border: 4px solid #38bdf8;
+
+  margin-bottom: 15px;
+  transition: 0.4s;
+}
+
+.card:hover img {
+  transform: scale(1.08);
+}
+
+/* Names */
+.card h3 {
+  color: #ffffff;
+  font-size: 1.3rem;
+  margin-top: 10px;
+}
+
+/* Teacher Text */
+.teacher-card p {
+  color: #cbd5e1;
+  margin-top: 10px;
+}
+
+/* Students Section */
+.students-section {
+  margin-top: 30px;
+}
+
+/* Learning Badge */
+.card::before {
+  content: "Frontend Developer";
+  display: inline-block;
+  background: #2563eb;
+  color: white;
+
+  font-size: 12px;
+  padding: 5px 12px;
+  border-radius: 20px;
+
+  margin-bottom: 15px;
+}
+
+/* Teacher Badge */
+.teacher-card::before {
+  content: "Instructor";
+  background: #f59e0b;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .developer-container h2 {
+    font-size: 2rem;
+  }
+
+  .card img {
+    width: 120px;
+    height: 120px;
+  }
+}
