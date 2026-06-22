@@ -8,15 +8,17 @@ function Home() {
 
   return (
     <>
+      <div className="logo-section">
+        <img
+          src={logo}
+          alt="IT School Logo"
+          className="contact-logo"
+        />
+      </div>
+
 
       <div className="home-container">
         <header className="hero">
-          <img
-            src={logo}
-            alt="IT School Logo"
-            className="hero-logo"
-          />
-
           <h1>IT School</h1>
           <p>
             Learn modern technology, build real-world projects, and develop

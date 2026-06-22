@@ -9,7 +9,7 @@ function Menu() {
     <>
       <button
         className="menu-btn"
-        onClick={() => setShowSidebar(true)}
+        onClick={() => setShowSidebar(!showSidebar)}
       >
         ☰
       </button>
@@ -18,7 +18,9 @@ function Menu() {
         className={`sidebar ${showSidebar ? "active" : ""}`}
         onMouseLeave={() => setShowSidebar(false)}
       >
-        <div className="logo">Menu</div>
+        <div className="logo">
+          <h2>MENU</h2>
+        </div>
 
         <ul className="nav-links">
           <li>
@@ -38,22 +40,24 @@ function Menu() {
               Contact
             </Link>
           </li>
+
           <li>
-            <Link to="/Courses" onClick={() => setShowSidebar(false)}>
+            <Link to="/courses" onClick={() => setShowSidebar(false)}>
               Courses
             </Link>
           </li>
+
           <li>
             <Link to="/vision" onClick={() => setShowSidebar(false)}>
               Vision
             </Link>
           </li>
+
           <li>
-            <Link to="/Development" onClick={() => setShowSidebar(false)}>
+            <Link to="/development" onClick={() => setShowSidebar(false)}>
               Development
             </Link>
           </li>
-
         </ul>
       </div>
     </>

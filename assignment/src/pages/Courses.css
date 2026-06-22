@@ -25,7 +25,6 @@
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
   color: white;
 }
-
 /* Title */
 .programs-section h2 {
   text-align: center;
@@ -33,6 +32,22 @@
   color: #040404;
   margin-bottom: 15px;
 }
+
+.logo-section {
+  position: absolute;
+  top: 20px;  
+  left: 30px;
+  z-index: 100;
+}
+
+.contact-logo {
+  width: 170px;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.3));
+  transition: transform 0.3s ease;
+}
+
 
 .programs-subtitle {
   text-align: center;
