@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 import Menu from "./components/Menu";
 
 import Home from "./pages/Home";
@@ -11,15 +12,33 @@ import Development from "./pages/Development";
 function App() {
   return (
     <BrowserRouter>
-      <Menu />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/vision" element={<Vision />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/courses" element={<Courses />} />
-        <Route path="/development" element={<Development />} />
-      </Routes>
+      <div
+        
+      >
+        {/* Left Sidebar */}
+        <div
+          style={{
+            width: "220px",
+            background: "#fff",
+            padding: "20px",
+            borderRight: "1px solid gray",
+          }}
+        >
+          <Menu />
+        </div>
+
+        {/* Main Content */}
+        <div style={{ flex: 1, padding: "20px" }}>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/vision" element={<Vision />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/courses" element={<Courses />} />
+            <Route path="/development" element={<Development />} />
+          </Routes>
+        </div>
+      </div>
     </BrowserRouter>
   );
 }

@@ -28,22 +28,22 @@ function Contact() {
 
   return (
     <>
-      <div className="contact-container">
-        <div className="logo-section">
-          <img
-            src={logo}
-            alt="IT School Logo"
-            className="contact-logo"
-          />
+      {/* NEW LOGO SECTION */}
+      <div className="logo-section">
+        <div className="logo-box">
+          <img src={logo} alt="IT School Logo" className="contact-logo" />
         </div>
+      </div>
 
+      {/* HERO SECTION */}
+      <div className="contact-container">
         <div className="hero-content">
           <h1>Contact Us</h1>
           <p>We are here to help you anytime</p>
         </div>
-
       </div>
 
+      {/* CONTACT INFO */}
       <div className="contact-info">
         <div className="info-card">
           <h3>Email</h3>
@@ -61,6 +61,7 @@ function Contact() {
         </div>
       </div>
 
+      {/* FORM */}
       <form className="contact-form" onSubmit={handleSubmit}>
         <div>
           <label>Name</label>
