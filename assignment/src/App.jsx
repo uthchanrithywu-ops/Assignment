@@ -11,9 +11,7 @@ import Development from "./pages/Development";
 function App() {
   return (
     <BrowserRouter>
-   
       <Menu />
-    
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
