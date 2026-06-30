@@ -13,7 +13,6 @@ function App() {
   return (
     <BrowserRouter>
       <div
-        
       >
         {/* Left Sidebar */}
         <div
