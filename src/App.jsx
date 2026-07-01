@@ -12,7 +12,7 @@ import Development from "./pages/Development";
 function App() {
   return (
     <HashRouter>
-      <div>
+    
         {/* Left Sidebar */}
         <div
           style={{
@@ -41,7 +41,6 @@ function App() {
             <Route path="/development" element={<Development />} />
           </Routes>
         </div>
-      </div>
     </HashRouter>
   );
 }
