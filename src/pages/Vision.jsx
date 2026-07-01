@@ -1,6 +1,6 @@
 import "./Vision.css";
-import visionImg from "../assets/vision.png";
-import missionImg from "../assets/mission.png";
+import visionImg from "../assets/Vision.png";
+import missionImg from "../assets/Mission.png";
 import Footer from "./Footer";
 import logo from "../assets/Logo.png";
 
