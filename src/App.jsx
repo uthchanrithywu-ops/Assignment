@@ -12,35 +12,34 @@ import Development from "./pages/Development";
 function App() {
   return (
     <HashRouter>
-    
-        {/* Left Sidebar */}
-        <div
-          style={{
-            width: "220px",
-            background: "#fff",
-            padding: "20px",
-            borderRight: "1px solid #ddd",
-          }}
-        >
-          <Menu />
-        </div>
 
-        {/* Main Content */}
-        <div
-          style={{
-            flex: 1,
-            padding: "20px",
-          }}
-        >
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/vision" element={<Vision />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/courses" element={<Courses />} />
-            <Route path="/development" element={<Development />} />
-          </Routes>
-        </div>
+      {/* Left Sidebar */}
+      <div
+        style={{
+          width: "220px",
+          background: "#fff",
+          padding: "20px",
+        }}
+      >
+        <Menu />
+      </div>
+
+      {/* Main Content */}
+      <div
+        style={{
+          flex: 1,
+          padding: "20px",
+        }}
+      >
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/vision" element={<Vision />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/courses" element={<Courses />} />
+          <Route path="/development" element={<Development />} />
+        </Routes>
+      </div>
     </HashRouter>
   );
 }
