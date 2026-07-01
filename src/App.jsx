@@ -12,12 +12,7 @@ import Development from "./pages/Development";
 function App() {
   return (
     <HashRouter>
-      <div
-        style={{
-          display: "flex",
-          minHeight: "100vh",
-        }}
-      >
+      <div>
         {/* Left Sidebar */}
         <div
           style={{
