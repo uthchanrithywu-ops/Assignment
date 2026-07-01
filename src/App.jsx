@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 
 import Menu from "./components/Menu";
 
@@ -11,8 +11,12 @@ import Development from "./pages/Development";
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <div
+        style={{
+          display: "flex",
+          minHeight: "100vh",
+        }}
       >
         {/* Left Sidebar */}
         <div
@@ -20,14 +24,19 @@ function App() {
             width: "220px",
             background: "#fff",
             padding: "20px",
-            borderRight: "1px solid gray",
+            borderRight: "1px solid #ddd",
           }}
         >
           <Menu />
         </div>
 
         {/* Main Content */}
-        <div style={{ flex: 1, padding: "20px" }}>
+        <div
+          style={{
+            flex: 1,
+            padding: "20px",
+          }}
+        >
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
@@ -38,7 +47,7 @@ function App() {
           </Routes>
         </div>
       </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
