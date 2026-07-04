@@ -27,7 +27,6 @@ function App() {
       {/* Main Content */}
       <div
         style={{
-          flex: 1,
           padding: "20px",
         }}
       >
