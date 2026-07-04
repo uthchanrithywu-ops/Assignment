@@ -20,11 +20,11 @@ function Footer() {
 
           <Link to="/">Home</Link>
           <Link to="/about">About</Link>
-          <Link to="/vision">Vision</Link>
-          <Link to="/courses">Courses</Link>
           <Link to="/contact">Contact</Link>
+          <Link to="/courses">Courses</Link>
+          <Link to="/vision">Vision</Link>
           <Link to="/development">Development</Link>
-          
+
         </div>
 
         <div className="footer-box">
