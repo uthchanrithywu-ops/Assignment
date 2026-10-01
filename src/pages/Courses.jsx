@@ -1,7 +1,6 @@
 import React from "react";
 import "./Courses.css";
 import Footer from "./Footer";
-import logo from "../assets/Logo.png";
 
 
 function Courses() {
@@ -9,13 +8,6 @@ function Courses() {
     <>
 
       <section className="programs-section">
-        <div className="logo-section">
-          <img
-            src={logo}
-            alt="IT School Logo"
-            className="contact-logo"
-          />
-        </div>
         <div className="container">
           <h2>Our Courses</h2>
 

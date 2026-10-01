@@ -1,0 +1,72 @@
+.not-found {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 48px 24px;
+  background: transparent;
+}
+
+.not-found-card {
+  width: min(100%, 620px);
+  padding: clamp(32px, 7vw, 64px);
+  text-align: center;
+  background: #fff;
+  border: 1px solid #e5eaf2;
+  border-radius: 28px;
+  box-shadow: 0 24px 70px rgba(24, 39, 75, .1);
+}
+
+.not-found-code {
+  display: block;
+  color: #dbeafe;
+  font-family: Manrope, sans-serif;
+  font-size: clamp(88px, 20vw, 156px);
+  font-weight: 800;
+  letter-spacing: -.09em;
+  line-height: .95;
+}
+
+.not-found-eyebrow {
+  margin: 24px 0 10px;
+  color: #2563eb;
+  font-size: .8rem;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+
+.not-found h1 {
+  margin: 0 auto;
+  max-width: 460px;
+  font-size: clamp(1.8rem, 5vw, 2.5rem);
+  letter-spacing: -.04em;
+}
+
+.not-found-copy {
+  max-width: 430px;
+  margin: 16px auto 28px;
+  color: #64748b;
+}
+
+.not-found-home {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 20px;
+  border-radius: 999px;
+  background: #2563eb;
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background .2s ease, transform .2s ease;
+}
+
+.not-found-home:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+}
+
+.not-found-home:focus-visible {
+  outline: 3px solid #93c5fd;
+  outline-offset: 3px;
+}

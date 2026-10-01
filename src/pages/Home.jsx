@@ -1,22 +1,11 @@
 import { useNavigate } from "react-router-dom";
 import "./Home.css";
-import logo from "../assets/Logo.png";
 import Footer from "./Footer";
-import Menu from "../components/Menu";
 function Home() {
   const navigate = useNavigate();
 
   return (
     <>
-      <div className="logo-section">
-        <img
-          src={logo}
-          alt="IT School Logo"
-          className="contact-logo"
-        />
-      </div>
-
-
       <div className="home-container">
         <header className="hero">
           <h1>IT School</h1>

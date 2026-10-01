@@ -1,65 +1,45 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./Menu.css";
+import logo from "../assets/Logo.png";
+
+const links = [
+  ["/", "Home"],
+  ["/about", "About"],
+  ["/courses", "Courses"],
+  ["/vision", "Vision"],
+  ["/development", "Development"],
+  ["/contact", "Contact"],
+];
 
 function Menu() {
-  const [showSidebar, setShowSidebar] = useState(false);
+  const [open, setOpen] = useState(false);
 
   return (
     <>
-      <button
-        className="menu-btn"
-        onClick={() => setShowSidebar(!showSidebar)}
-      >
-        ☰
-      </button>
-
-      <div
-        className={`sidebar ${showSidebar ? "active" : ""}`}
-        onMouseLeave={() => setShowSidebar(false)}
-      >
-        <div className="logo">
-          <h2>MENU</h2>
-        </div>
-
-        <ul className="nav-links">
-          <li>
-            <Link to="/" onClick={() => setShowSidebar(false)}>
-              Home
-            </Link>
-          </li>
-
-          <li>
-            <Link to="/about" onClick={() => setShowSidebar(false)}>
-              About
-            </Link>
-          </li>
-
-          <li>
-            <Link to="/contact" onClick={() => setShowSidebar(false)}>
-              Contact
-            </Link>
-          </li>
-
-          <li>
-            <Link to="/courses" onClick={() => setShowSidebar(false)}>
-              Courses
-            </Link>
-          </li>
-
-          <li>
-            <Link to="/vision" onClick={() => setShowSidebar(false)}>
-              Vision
-            </Link>
-          </li>
-
-          <li>
-            <Link to="/development" onClick={() => setShowSidebar(false)}>
-              Development
-            </Link>
-          </li>
-        </ul>
-      </div>
+      <header className="side-nav">
+        <NavLink className="brand" to="/" onClick={() => setOpen(false)}>
+          <img className="brand-logo" src={logo} alt="IT School logo" />
+          <span>IT School<small>Learn. Build. Grow.</small></span>
+        </NavLink>
+        <button
+          className="menu-btn"
+          type="button"
+          aria-label={open ? "Close navigation" : "Open navigation"}
+          aria-expanded={open}
+          onClick={() => setOpen(!open)}
+        >
+          <span /><span /><span />
+        </button>
+        <nav className={`nav-links ${open ? "active" : ""}`} aria-label="Main navigation">
+          {links.map(([to, label]) => (
+            <NavLink key={to} to={to} end={to === "/"} onClick={() => setOpen(false)}>
+              {label}
+            </NavLink>
+          ))}
+        </nav>
+      </header>
+      {open && <button className="nav-backdrop" aria-label="Close navigation" onClick={() => setOpen(false)} />}
     </>
   );
 }

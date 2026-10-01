@@ -1,20 +1,10 @@
 import "./About.css";
 import Footer from "./Footer";
 import { Link } from "react-router-dom";
-import logo from "../assets/Logo.png";
 
 function About() {
   return (
     <>
-      <div className="logo-section">
-        <img
-          src={logo}
-          alt="IT School Logo"
-          className="contact-logo"
-        />
-      </div>
-
-
       <div className="about-page">
         <div className="about-header">
 

@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "./Contact.css";
 import Footer from "./Footer";
-import logo from "../assets/Logo.png";
 
 function Contact() {
   const [name, setName] = useState("");
@@ -28,13 +27,6 @@ function Contact() {
 
   return (
     <>
-      {/* NEW LOGO SECTION */}
-      <div className="logo-section">
-        <div className="logo-box">
-          <img src={logo} alt="IT School Logo" className="contact-logo" />
-        </div>
-      </div>
-
       {/* HERO SECTION */}
       <div className="contact-container">
         <div className="hero-content">

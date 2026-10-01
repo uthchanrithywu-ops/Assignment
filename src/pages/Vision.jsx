@@ -2,19 +2,10 @@ import "./Vision.css";
 import visionImg from "../assets/Vision.png";
 import missionImg from "../assets/Mission.png";
 import Footer from "./Footer";
-import logo from "../assets/Logo.png";
 
 function Vision() {
   return (
     <div className="vision-container">
-      <div className="logo-section">
-        <img
-          src={logo}
-          alt="IT School Logo"
-          className="contact-logo"
-        />
-      </div>
-
       <header
         className="vision-header"
         style={{
