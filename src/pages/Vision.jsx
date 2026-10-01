@@ -1,5 +1,5 @@
 import "./Vision.css";
-import visionImg from "../assets/vision.png";
+import visionImg from "../assets/Vision.png";
 import missionImg from "../assets/mission.png";
 import Footer from "./Footer";
 
