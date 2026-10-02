@@ -1,5 +1,9 @@
 .about-page { min-height: 100vh; padding-bottom: 56px; background: transparent; }
-.about-header { min-height: 390px; padding: 70px 24px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; color: #fff; background: linear-gradient(110deg,rgba(12,25,51,.88),rgba(18,47,93,.68)),url('../assets/Coding.png') center/cover; }
+.about-header { position: relative; isolation: isolate; overflow: hidden; min-height: 390px; padding: 70px 24px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; color: #fff; background: #0c1933; }
+.about-header-video, .about-header-overlay { position: absolute; inset: 0; width: 100%; height: 100%; }
+.about-header-video { z-index: 0; object-fit: cover; }
+.about-header-overlay { z-index: 1; background: linear-gradient(110deg,rgba(12,25,51,.88),rgba(18,47,93,.68)); }
+.about-header > :not(.about-header-video):not(.about-header-overlay) { position: relative; z-index: 2; }
 .about-header h1 { margin: 0 0 16px; color: #fff; font-size: clamp(38px,6vw,64px); letter-spacing: -.04em; }
 .about-header p { max-width: 690px; margin: 0; color: #e0e8f7; font-size: clamp(16px,2vw,20px); }
 .about-content { max-width: 1140px; margin: 0 auto; padding: 44px 28px 0; }

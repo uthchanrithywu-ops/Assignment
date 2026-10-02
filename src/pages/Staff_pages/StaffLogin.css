@@ -1,0 +1,99 @@
+.staff-login-page {
+  min-height: 70vh;
+  display: grid;
+  place-items: center;
+  padding: 48px 24px;
+}
+
+.staff-login-card {
+  width: min(100%, 460px);
+  padding: clamp(28px, 6vw, 48px);
+  background: #fff;
+  border: 1px solid #e5eaf2;
+  border-radius: 22px;
+  box-shadow: 0 24px 70px rgba(24, 39, 75, .08);
+}
+
+.staff-login-eyebrow {
+  margin: 0 0 10px;
+  color: #2563eb;
+  font-size: .8rem;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+
+.staff-login-card h1 {
+  margin: 0;
+  color: #172033;
+  font-size: 2rem;
+}
+
+.staff-login-copy {
+  margin: 10px 0 26px;
+  color: #64748b;
+}
+
+.staff-login-card form {
+  display: grid;
+  gap: 10px;
+}
+
+.staff-login-card label {
+  color: #334155;
+  font-size: .9rem;
+  font-weight: 600;
+}
+
+.staff-login-card input {
+  width: 100%;
+  margin-bottom: 8px;
+  padding: 12px 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 9px;
+  font: inherit;
+}
+
+.staff-login-card input:focus {
+  outline: 3px solid #bfdbfe;
+  border-color: #2563eb;
+}
+
+.staff-login-card button {
+  margin-top: 8px;
+  padding: 13px 18px;
+  border: 0;
+  border-radius: 9px;
+  background: #2563eb;
+  color: #fff;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.staff-login-card button:hover {
+  background: #1d4ed8;
+}
+
+.staff-login-error {
+  margin: 0;
+  color: #b91c1c;
+  font-size: .9rem;
+}
+
+.staff-login-toggle {
+  width: 100%;
+  margin-top: 18px;
+  padding: 8px 0;
+  border: 0;
+  background: transparent;
+  color: #2563eb;
+  font: inherit;
+  font-size: .92rem;
+  cursor: pointer;
+}
+
+.staff-login-toggle:hover {
+  color: #1d4ed8;
+  text-decoration: underline;
+}

@@ -1,12 +1,17 @@
 import "./About.css";
 import Footer from "./Footer";
 import { Link } from "react-router-dom";
+import heroVideo from "../../assets/Video.mp4";
 
 function About() {
   return (
     <>
       <div className="about-page">
         <div className="about-header">
+          <video className="about-header-video" autoPlay muted loop playsInline aria-hidden="true">
+            <source src={heroVideo} type="video/mp4" />
+          </video>
+          <div className="about-header-overlay" aria-hidden="true" />
 
           <h1>About IT School</h1>
           <p>

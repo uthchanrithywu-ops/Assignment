@@ -1,4 +1,4 @@
-.contact-container { min-height: 420px; padding: 70px 22px; background: linear-gradient(110deg,rgba(12,25,51,.82),rgba(18,47,93,.55)),url('../assets/contact-us-communication-support-service-assistance-concept.jpg') center/cover no-repeat; display: flex; justify-content: center; align-items: center; }
+.contact-container { min-height: 420px; padding: 70px 22px; background: linear-gradient(110deg,rgba(12,25,51,.82),rgba(18,47,93,.55)),url('../../assets/contact-us-communication-support-service-assistance-concept.jpg') center/cover no-repeat; display: flex; justify-content: center; align-items: center; }
 .hero-content { max-width: 700px; width: 100%; padding: 38px 24px; border: 1px solid #ffffff45; border-radius: 18px; background: #ffffff15; text-align: center; color: #fff; backdrop-filter: blur(10px); }
 .hero-content h1 { margin: 0 0 12px; color: #fff; font-size: clamp(40px,6vw,62px); letter-spacing: -.04em; }
 .hero-content p { margin: 0; color: #e0e8f7; font-size: 18px; }

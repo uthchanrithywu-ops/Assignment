@@ -1,6 +1,7 @@
 import "./Vision.css";
-import visionImg from "../assets/Vision.png";
-import missionImg from "../assets/mission.png";
+import visionImg from "../../assets/vision.png";
+import missionImg from "../../assets/mission.png";
+import visionVideo from "../../assets/video2.mp4";
 import Footer from "./Footer";
 
 function Vision() {
@@ -12,6 +13,10 @@ function Vision() {
           backgroundImage: `linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)), url(${visionImg})`,
         }}
       >
+        <video className="vision-header-video" autoPlay muted loop playsInline aria-hidden="true">
+          <source src={visionVideo} type="video/mp4" />
+        </video>
+        <div className="vision-header-overlay" aria-hidden="true" />
         <h1>Vision & Mission</h1>
 
         <p>

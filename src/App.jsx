@@ -1,21 +1,29 @@
-import { HashRouter, Routes, Route, useLocation } from "react-router-dom";
+import { HashRouter, Routes, Route, useLocation, Navigate } from "react-router-dom";
 import { useEffect } from "react";
 import "./App.css";
 import Menu from "./components/Menu";
-import Home from "./pages/Home";
-import About from "./pages/About";
-import Vision from "./pages/Vision";
-import Contact from "./pages/Contact";
-import Courses from "./pages/Courses";
-import Development from "./pages/Development";
-import NotFound from "./pages/NotFound";
+import Home from "./pages/website/Home";
+import About from "./pages/website/About";
+import Vision from "./pages/website/Vision";
+import Contact from "./pages/website/Contact";
+import Courses from "./pages/website/Courses";
+import Development from "./pages/website/Development";
+import NotFound from "./pages/website/NotFound";
+import Staff from "./pages/Staff_pages/staff";
+import StaffLogin from "./pages/Staff_pages/StaffLogin";
 
 function ScrollToTop() {
-  const { pathname } = useLocation();
+  const { pathname, hash } = useLocation();
 
   useEffect(() => {
+    if (hash) {
+      requestAnimationFrame(() => {
+        document.getElementById(decodeURIComponent(hash.slice(1)))?.scrollIntoView();
+      });
+      return;
+    }
     window.scrollTo(0, 0);
-  }, [pathname]);
+  }, [pathname, hash]);
 
   return null;
 }
@@ -34,6 +42,8 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/courses" element={<Courses />} />
             <Route path="/development" element={<Development />} />
+            <Route path="/staff/login" element={<StaffLogin />} />
+            <Route path="/staff" element={sessionStorage.getItem("staffLoggedIn") === "true" ? <Staff /> : <Navigate to="/staff/login" replace />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>

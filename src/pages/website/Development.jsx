@@ -4,12 +4,12 @@ import Footer from "./Footer";
 
 
 // import images
-import Rasy from "../assets/Rasy.png";
-import Roth from "../assets/Roth.png";
-import Thanun from "../assets/Thanun.png";
-import Rithy from "../assets/Rithy.jpg";
-import Fary from "../assets/Fary.png";
-import Teacher from "../assets/Teacher.png";
+import Rasy from "../../assets/Rasy.png";
+import Roth from "../../assets/Roth.png";
+import Thanun from "../../assets/Thanun.png";
+import Rithy from "../../assets/Rithy.jpg";
+import Fary from "../../assets/Fary.png";
+import Teacher from "../../assets/Teacher.png";
 
 function DeveloperPage() {
     return (
@@ -18,7 +18,7 @@ function DeveloperPage() {
         <div className="developer-container">
 
             {/* Teacher Section */}
-            <div className="teacher-section">
+            <div className="teacher-section" id="teacher">
                 <h2>Teacher</h2>
 
                 <div className="card teacher-card">

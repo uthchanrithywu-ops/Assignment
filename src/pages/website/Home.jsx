@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import "./Home.css";
 import Footer from "./Footer";
+import heroVideo from "../../assets/Video.mp4";
 function Home() {
   const navigate = useNavigate();
 
@@ -8,6 +9,10 @@ function Home() {
     <>
       <div className="home-container">
         <header className="hero">
+          <video className="hero-video" autoPlay muted loop playsInline aria-hidden="true">
+            <source src={heroVideo} type="video/mp4" />
+          </video>
+          <div className="hero-overlay" aria-hidden="true" />
           <h1>IT School</h1>
           <p>
             Learn modern technology, build real-world projects, and develop
@@ -22,6 +27,10 @@ function Home() {
             <button onClick={() => navigate("/contact")}>
               Contact Us
             </button>
+
+            {/* <button onClick={() => navigate("/staff")}>
+              Staff Portal
+            </button> */}
           </div>
         </header>
 
