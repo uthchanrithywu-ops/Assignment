@@ -259,12 +259,22 @@
   top: 100%;
   left: 0;
   display: none;
+  width: max-content;
   min-width: 240px;
+  max-width: calc(100vw - 24px);
   padding: 8px;
   border: 1px solid #e5eaf2;
   border-radius: 0 0 12px 12px;
   background: #fff;
   box-shadow: 0 16px 32px rgba(24, 39, 75, .16);
+}
+
+/* Keep the submenu inside the viewport when the nav wraps on tablet widths. */
+@media (min-width: 761px) and (max-width: 1200px) {
+  .nav-dropdown-menu {
+    left: auto;
+    right: 0;
+  }
 }
 
 .nav-dropdown:hover .nav-dropdown-menu,
@@ -311,6 +321,8 @@
 
   .nav-dropdown-menu {
     position: static;
+    width: 100%;
+    max-width: none;
     min-width: 0;
     padding: 4px 0 4px 14px;
     border: 0;

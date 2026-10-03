@@ -1,17 +1,153 @@
-.contact-container { min-height: 420px; padding: 70px 22px; background: linear-gradient(110deg,rgba(12,25,51,.82),rgba(18,47,93,.55)),url('../../assets/contact-us-communication-support-service-assistance-concept.jpg') center/cover no-repeat; display: flex; justify-content: center; align-items: center; }
-.hero-content { max-width: 700px; width: 100%; padding: 38px 24px; border: 1px solid #ffffff45; border-radius: 18px; background: #ffffff15; text-align: center; color: #fff; backdrop-filter: blur(10px); }
-.hero-content h1 { margin: 0 0 12px; color: #fff; font-size: clamp(40px,6vw,62px); letter-spacing: -.04em; }
-.hero-content p { margin: 0; color: #e0e8f7; font-size: 18px; }
-.contact-info { position: relative; z-index: 1; max-width: 1050px; margin: -38px auto 0; padding: 0 22px; display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 16px; }
-.info-card { padding: 24px 18px; border: 1px solid #e8edf5; border-radius: 14px; background: #fff; text-align: center; box-shadow: 0 12px 30px #1e315012; }
-.info-card h3 { margin: 0 0 8px; color: #2563eb; font-size: 18px; }
-.info-card p { margin: 0; color: #66748a; font-size: 15px; overflow-wrap: anywhere; }
-.contact-form { max-width: 760px; margin: 44px auto 64px; padding: 32px; border: 1px solid #e8edf5; border-radius: 16px; background: #fff; box-shadow: 0 8px 24px #1e31500a; }
-.contact-form div { margin-bottom: 20px; }
-.contact-form label { display: block; margin-bottom: 7px; color: #344258; font-size: 14px; font-weight: 700; }
-.contact-form input,.contact-form textarea { width: 100%; padding: 13px 14px; border: 1px solid #dce4ef; border-radius: 9px; background: #fbfcfe; color: #172033; font: inherit; }
-.contact-form input:focus,.contact-form textarea:focus { outline: 3px solid #2563eb25; border-color: #5c8ef5; }
-.contact-form textarea { min-height: 130px; resize: vertical; }
-.contact-form button { width: 100%; padding: 14px; border: 0; border-radius: 10px; background: #2563eb; color: #fff; font-weight: 700; cursor: pointer; transition: background .2s; }
-.contact-form button:hover { background: #1d4ed8; }
-@media(max-width:700px) { .contact-container { min-height: 320px; }.contact-info { margin: -22px 16px 0; padding: 0; grid-template-columns: 1fr; }.contact-form { margin: 30px 16px 44px; padding: 24px; } }
+.contact-container {
+    min-height: 420px;
+    padding: 70px 22px;
+    background: linear-gradient(110deg, rgba(12, 25, 51, .82), rgba(18, 47, 93, .55)), url('../../assets/contact-us-communication-support-service-assistance-concept.jpg') center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-content {
+    max-width: 700px;
+    width: 100%;
+    padding: 38px 24px;
+    border: 1px solid #ffffff45;
+    border-radius: 18px;
+    background: #ffffff15;
+    text-align: center;
+    color: #fff;
+    backdrop-filter: blur(10px);
+}
+
+.hero-content h1 {
+    margin: 0 0 12px;
+    color: #fff;
+    font-size: clamp(40px, 6vw, 62px);
+    letter-spacing: -.04em;
+}
+
+.hero-content p {
+    margin: 0;
+    color: #e0e8f7;
+    font-size: 18px;
+}
+
+.contact-info {
+    position: relative;
+    z-index: 1;
+    max-width: 1050px;
+    margin: -38px auto 0;
+    padding: 0 22px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.info-card {
+    padding: 24px 18px;
+    border: 1px solid #e8edf5;
+    border-radius: 14px;
+    background: #fff;
+    text-align: center;
+    box-shadow: 0 12px 30px #1e315012;
+}
+
+.info-card h3 {
+    margin: 0 0 8px;
+    color: #2563eb;
+    font-size: 18px;
+}
+
+.info-card p {
+    margin: 0;
+    color: #66748a;
+    font-size: 15px;
+    overflow-wrap: anywhere;
+}
+
+.telegram-link {
+    color: #168acd;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.telegram-link:hover {
+    text-decoration: underline;
+}
+
+.contact-form {
+    max-width: 760px;
+    margin: 44px auto 64px;
+    padding: 32px;
+    border: 1px solid #e8edf5;
+    border-radius: 16px;
+    background: #fff;
+    box-shadow: 0 8px 24px #1e31500a;
+}
+
+.contact-form div {
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 7px;
+    color: #344258;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 13px 14px;
+    border: 1px solid #dce4ef;
+    border-radius: 9px;
+    background: #fbfcfe;
+    color: #172033;
+    font: inherit;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: 3px solid #2563eb25;
+    border-color: #5c8ef5;
+}
+
+.contact-form textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 14px;
+    border: 0;
+    border-radius: 10px;
+    background: #2563eb;
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background .2s;
+}
+
+.contact-form button:hover {
+    background: #1d4ed8;
+}
+
+@media(max-width:700px) {
+    .contact-container {
+        min-height: 320px;
+    }
+
+    .contact-info {
+        margin: -22px 16px 0;
+        padding: 0;
+        grid-template-columns: 1fr;
+    }
+
+    .contact-form {
+        margin: 30px 16px 44px;
+        padding: 24px;
+    }
+}

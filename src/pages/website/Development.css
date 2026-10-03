@@ -1,14 +1,147 @@
-.developer-container { min-height: 100vh; padding: 58px clamp(18px,5vw,64px) 72px; background: transparent; }
-.developer-container h2 { margin: 0 0 30px; color: #172033; text-align: center; font-size: clamp(30px,4vw,42px); letter-spacing: -.03em; }
-.teacher-section { margin-bottom: 58px; display: flex; flex-direction: column; align-items: center; }
-.teacher-card { width: min(100%,340px); }
-.students-section { max-width: 1140px; margin: auto; }
-.students-grid { display: grid; grid-template-columns: repeat(5,minmax(0,1fr)); gap: 16px; }
-.developer-container .card { padding: 24px 18px; border: 1px solid #e8edf5; border-radius: 16px; background: #fff; text-align: center; box-shadow: 0 8px 24px #1e31500a; transition: transform .2s,box-shadow .2s; }
-.developer-container .card:hover { transform: translateY(-4px); box-shadow: 0 16px 35px #1e315015; }
-.developer-container .card img { width: 126px; height: 126px; margin-bottom: 14px; border: 4px solid #eaf1ff; border-radius: 50%; object-fit: cover; }
-.developer-container .card h3 { margin: 0; color: #172033; font-size: 17px; }
-.teacher-card p { margin: 8px 0 0; color: #66748a; }
-@media(max-width:1050px) { .students-grid { grid-template-columns: repeat(3,minmax(0,1fr)); } }
-@media(max-width:620px) { .students-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }.developer-container .card img { width: 100px; height: 100px; } }
-@media(max-width:390px) { .students-grid { grid-template-columns: 1fr; } }
+.developer-container {
+  min-height: 100vh;
+  padding: 58px clamp(18px, 5vw, 64px) 72px;
+  background: transparent;
+}
+
+.developer-container h2 {
+  margin: 0 0 30px;
+  color: #172033;
+  text-align: center;
+  font-size: clamp(30px, 4vw, 42px);
+  letter-spacing: -.03em;
+}
+
+
+.developer-container .card {
+  padding: 24px 18px;
+  border: 1px solid #e8edf5;
+  border-radius: 16px;
+  background: #fff;
+  text-align: center;
+  box-shadow: 0 8px 24px #1e31500a;
+  transition: transform .2s, box-shadow .2s;
+}
+
+.developer-container .card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 35px #1e315015;
+}
+
+.developer-container .card img {
+  display: block;
+  width: 126px;
+  height: 126px;
+  margin: 0 auto 14px;
+  border: 4px solid #eaf1ff;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.developer-container .card h3 {
+  margin: 0;
+  color: #172033;
+  font-size: 17px;
+}
+
+.leadership-section {
+  max-width: 900px;
+  margin: 0 auto 72px;
+}
+
+.organization-chart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.leadership-card {
+  position: relative;
+  width: min(100%, 290px);
+}
+
+.leadership-role {
+  display: block;
+  margin-bottom: 16px;
+  color: #2563eb;
+  font-size: .78rem;
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.president-card {
+  border-top: 4px solid #2563eb !important;
+}
+
+.organization-president {
+  position: relative;
+  padding-bottom: 44px;
+}
+
+.organization-president::after {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  height: 44px;
+  background: #cbd5e1;
+  content: "";
+}
+
+.organization-vice-presidents {
+  position: relative;
+  display: grid;
+  width: min(100%, 640px);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+  padding-top: 28px;
+}
+
+.organization-vice-presidents::before {
+  position: absolute;
+  top: 0;
+  left: 25%;
+  right: 25%;
+  height: 2px;
+  background: #cbd5e1;
+  content: "";
+}
+
+.organization-vice-presidents .leadership-card::before {
+  position: absolute;
+  top: -28px;
+  left: 50%;
+  width: 2px;
+  height: 28px;
+  background: #cbd5e1;
+  content: "";
+}
+
+.organization-vice-presidents .leadership-card {
+  justify-self: center;
+}
+
+@media (max-width: 620px) {
+  .organization-vice-presidents {
+    width: 100%;
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding-top: 0;
+  }
+
+  .organization-vice-presidents::before,
+  .organization-vice-presidents .leadership-card::before,
+  .organization-president::after {
+    display: none;
+  }
+
+  .organization-president {
+    padding-bottom: 24px;
+  }
+
+  .developer-container .card img {
+    width: 108px;
+    height: 108px;
+  }
+}

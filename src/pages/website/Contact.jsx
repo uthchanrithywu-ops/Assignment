@@ -45,6 +45,12 @@ function Contact() {
         <div className="info-card">
           <h3>Phone</h3>
           <p>+855 12 345 678</p>
+          <p>
+            Telegram :{" "}
+            <a className="telegram-link" href="https://t.me/UC_RITHY" target="_blank" rel="noreferrer">
+              @UC_RITHY
+            </a>
+          </p>
         </div>
 
         <div className="info-card">

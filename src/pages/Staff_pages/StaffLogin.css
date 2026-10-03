@@ -59,20 +59,75 @@
   border-color: #2563eb;
 }
 
-.staff-login-card button {
-  margin-top: 8px;
+.staff-password-field {
+  position: relative;
+  width: 100%;
+}
+
+.staff-login-card .staff-password-field input {
+  padding-right: 46px;
+}
+
+.staff-login-card .staff-password-toggle {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  display: grid;
+  width: 24px;
+  height: 24px;
+  margin: 0;
+  padding: 3px;
+  place-items: center;
+  transform: translateY(-50%);
+  border: 0;
+  border-radius: 5px;
+  background: transparent;
+  color: #64748b;
+  cursor: pointer;
+}
+
+.staff-login-card .staff-password-toggle:hover {
+  background: #eff5ff;
+  color: #2563eb;
+}
+
+.staff-password-toggle svg {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.7;
+}
+
+.staff-password-toggle:focus-visible {
+  outline: 2px solid #bfdbfe;
+  outline-offset: 2px;
+}
+
+.staff-login-card form button[type="submit"] {
+  margin-top: 4px;
   padding: 13px 18px;
   border: 0;
-  border-radius: 9px;
+  border-radius: 999px;
   background: #2563eb;
   color: #fff;
   font: inherit;
   font-weight: 700;
   cursor: pointer;
+  transition: background .18s ease, transform .18s ease;
 }
 
-.staff-login-card button:hover {
+.staff-login-card form button[type="submit"]:hover {
   background: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+.staff-login-card form button[type="submit"]:focus-visible,
+.staff-login-toggle:focus-visible {
+  outline: 3px solid #bfdbfe;
+  outline-offset: 3px;
 }
 
 .staff-login-error {
@@ -82,18 +137,19 @@
 }
 
 .staff-login-toggle {
-  width: 100%;
-  margin-top: 18px;
-  padding: 8px 0;
+  display: block;
+  margin: 16px auto 0;
+  padding: 4px 8px;
   border: 0;
   background: transparent;
-  color: #2563eb;
+  color: #64748b;
   font: inherit;
-  font-size: .92rem;
+  font-size: .88rem;
   cursor: pointer;
+  transition: color .18s ease;
 }
 
 .staff-login-toggle:hover {
-  color: #1d4ed8;
+  color: #2563eb;
   text-decoration: underline;
 }

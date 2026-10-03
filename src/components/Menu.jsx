@@ -50,7 +50,6 @@ function Menu() {
             <div className="nav-dropdown-menu">
               <NavLink to="/vision" onClick={() => { setOpen(false); setAboutOpen(false); }}>Vision &amp; Mission</NavLink>
               <NavLink to="/development" onClick={() => { setOpen(false); setAboutOpen(false); }}>Management Team</NavLink>
-              <NavLink to="/development#teacher" onClick={() => { setOpen(false); setAboutOpen(false); }}>Our Teacher</NavLink>
             </div>
           </div>
           {links.map(([to, label]) => (

@@ -5,6 +5,7 @@ import "./StaffLogin.css";
 function StaffLogin() {
   const navigate = useNavigate();
   const [error, setError] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
   const [usernameValue, setUsernameValue] = useState(() => {
     try {
       return JSON.parse(localStorage.getItem("staffAccount") || "null")?.username || "";
@@ -23,7 +24,7 @@ function StaffLogin() {
   function handleSubmit(event) {
     event.preventDefault();
     const formData = new FormData(event.currentTarget);
-    const username = formData.get("username").trim();
+    const username = String(formData.get("username") || "").trim().toLowerCase();
     const password = formData.get("password");
     const savedAccount = localStorage.getItem("staffAccount");
 
@@ -49,9 +50,10 @@ function StaffLogin() {
       }
 
       localStorage.setItem("staffAccount", JSON.stringify({ username, password }));
-      setIsCreatingAccount(false);
-      setError("Account created. Log in with your new account.");
-      event.currentTarget.querySelector('[name="password"]').value = "";
+      // Creating the account is the first successful authentication, so send the
+      // user straight into the staff area instead of requiring a second submit.
+      sessionStorage.setItem("staffLoggedIn", "true");
+      navigate("/staff", { replace: true });
       return;
     }
 
@@ -61,7 +63,12 @@ function StaffLogin() {
     } catch {
       account = null;
     }
-    if (!account || !account.username || account.username !== username || account.password !== password) {
+    if (
+      !account ||
+      typeof account.username !== "string" ||
+      account.username.trim().toLowerCase() !== username ||
+      account.password !== password
+    ) {
       setError("Account not found or password is incorrect. Create an account first.");
       return;
     }
@@ -81,7 +88,22 @@ function StaffLogin() {
           <label htmlFor="staff-username">Username</label>
           <input id="staff-username" name="username" type="text" autoComplete="username" value={usernameValue} onChange={(event) => setUsernameValue(event.target.value)} required />
           <label htmlFor="staff-password">Password</label>
-          <input id="staff-password" name="password" type="password" autoComplete={isCreatingAccount ? "new-password" : "current-password"} required />
+          <div className="staff-password-field">
+            <input id="staff-password" name="password" type={showPassword ? "text" : "password"} autoComplete={isCreatingAccount ? "new-password" : "current-password"} required />
+            <button
+              className="staff-password-toggle"
+              type="button"
+              aria-label={showPassword ? "Hide password" : "Show password"}
+              aria-pressed={showPassword}
+              onClick={() => setShowPassword(!showPassword)}
+            >
+              {showPassword ? (
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3l18 18M10.6 10.6a2 2 0 0 0 2.8 2.8"/><path d="M9.9 5.2A10.8 10.8 0 0 1 12 5c5 0 8.5 4.3 9.5 7-.4 1.1-1.2 2.2-2.2 3.2M6.2 6.2A12.7 12.7 0 0 0 2.5 12c1 2.7 4.5 7 9.5 7 1.4 0 2.7-.4 3.8-1"/></svg>
+              ) : (
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 12S6 5 12 5s9.5 7 9.5 7-3.5 7-9.5 7-9.5-7-9.5-7Z"/><circle cx="12" cy="12" r="2.5"/></svg>
+              )}
+            </button>
+          </div>
           {error && <p className="staff-login-error" role="alert">{error}</p>}
           <button type="submit">{isCreatingAccount ? "Create Account" : "Log In"}</button>
         </form>
