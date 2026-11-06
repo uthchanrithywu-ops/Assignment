@@ -92,6 +92,7 @@ function StaffSignup({ onAuthenticated }) {
                 </form>
 
                 <p className="staff-signup-login">Already have an account? <Link to="/staff/login">Log in</Link></p>
+                <Link className="staff-signup-home" to="/">Back to website</Link>
             </section>
         </main>
     );

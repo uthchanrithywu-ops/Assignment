@@ -78,8 +78,11 @@ function StaffLogin({ onAuthenticated }) {
           </div>
           {error && <p className="staff-login-error" role="alert">{error}</p>}
           <button type="submit">Log In</button>
+          
+         
         </form>
         <p className="staff-login-signup-link">Need an account? <Link to="/staff/signup">Create one</Link></p>
+        <Link className="staff-login-home" to="/">Back to website</Link>
       </section>
     </main>
   );

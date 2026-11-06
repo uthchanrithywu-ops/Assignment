@@ -173,3 +173,29 @@
   outline: 3px solid #bfdbfe;
   outline-offset: 3px;
 }
+
+.staff-login-home {
+  display: flex;
+  justify-content: center;
+  width: fit-content;
+  margin: 18px auto 0;
+  padding: 10px 16px;
+  border: 1px solid #dbe4f0;
+  border-radius: 10px;
+  color: #475569;
+  font-size: .88rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background .18s ease, border-color .18s ease, color .18s ease;
+}
+
+.staff-login-home:hover {
+  border-color: #bfdbfe;
+  background: #f8fbff;
+  color: #1d4ed8;
+}
+
+.staff-login-home:focus-visible {
+  outline: 3px solid #bfdbfe;
+  outline-offset: 3px;
+}
