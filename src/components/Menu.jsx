@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./Menu.css";
-import logo from "../assets/Logo.png";
+import logo from "../assets/RTUniversityMark.png";
 
 const links = [
   ["/courses", "Courses"],
@@ -18,8 +18,8 @@ function Menu() {
     <>
       <header className="side-nav">
         <NavLink className="brand" to="/" onClick={() => setOpen(false)}>
-          <img className="brand-logo" src={logo} alt="IT School logo" />
-          <span>IT School<small>Learn. Build. Grow.</small></span>
+          <img className="brand-logo" src={logo} alt="RT University logo" />
+          <span>RT University<small>Learn. Discover. Lead.</small></span>
         </NavLink>
         <button
           className="menu-btn"

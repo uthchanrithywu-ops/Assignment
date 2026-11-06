@@ -1,18 +1,18 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Footer.css";
-import logo from "../../assets/Logo.png";
+import logo from "../../assets/RTUniversityMark.png";
 
 function Footer() {
   return (
     <footer className="footer">
       <div className="footer-container">
         <section className="footer-brand" aria-labelledby="footer-brand-title">
-          <Link className="footer-logo" to="/" aria-label="IT School home">
+          <Link className="footer-logo" to="/" aria-label="RT University home">
             <span className="footer-logo-mark">
               <img src={logo} alt="" aria-hidden="true" />
             </span>
-            <span id="footer-brand-title">IT School</span>
+            <span id="footer-brand-title">RT University</span>
           </Link>
           <p>
             Build your future in technology with practical learning and
@@ -41,7 +41,7 @@ function Footer() {
       </div>
 
       <div className="footer-bottom">
-        <p>© 2026 IT School. All rights reserved.</p>
+        <p>© 2026 RT University. All rights reserved.</p>
         <Link to="/contact">Have a question? Contact us <span aria-hidden="true">→</span></Link>
       </div>
     </footer>

@@ -1,11 +1,11 @@
-.staff-login-page {
+.staff-signup-page {
   min-height: 70vh;
   display: grid;
   place-items: center;
   padding: 48px 24px;
 }
 
-.staff-login-card {
+.staff-signup-card {
   width: min(100%, 460px);
   padding: clamp(28px, 6vw, 48px);
   background: #fff;
@@ -14,7 +14,7 @@
   box-shadow: 0 24px 70px rgba(24, 39, 75, .08);
 }
 
-.staff-login-eyebrow {
+.staff-signup-eyebrow {
   margin: 0 0 10px;
   color: #2563eb;
   font-size: .8rem;
@@ -23,29 +23,29 @@
   text-transform: uppercase;
 }
 
-.staff-login-card h1 {
+.staff-signup-card h1 {
   margin: 0;
   color: #172033;
   font-size: 2rem;
 }
 
-.staff-login-copy {
+.staff-signup-copy {
   margin: 10px 0 26px;
   color: #64748b;
 }
 
-.staff-login-card form {
+.staff-signup-card form {
   display: grid;
   gap: 10px;
 }
 
-.staff-login-card label {
+.staff-signup-card label {
   color: #334155;
   font-size: .9rem;
   font-weight: 600;
 }
 
-.staff-login-card input {
+.staff-signup-card input {
   width: 100%;
   margin-bottom: 8px;
   padding: 12px 14px;
@@ -54,59 +54,52 @@
   font: inherit;
 }
 
-.staff-login-card input:focus {
+.staff-signup-card input:focus {
   outline: 3px solid #bfdbfe;
   border-color: #2563eb;
 }
 
-.staff-password-field {
+.staff-signup-password-field {
   position: relative;
-  width: 100%;
 }
 
-.staff-login-card .staff-password-field input {
-  padding-right: 46px;
+.staff-signup-password-field input {
+  padding-right: 64px;
 }
 
-.staff-login-card .staff-password-toggle {
+.staff-signup-password-toggle {
   position: absolute;
   top: 50%;
-  right: 12px;
-  display: grid;
-  width: 24px;
-  height: 24px;
-  margin: 0;
-  padding: 3px;
-  place-items: center;
+  right: 10px;
   transform: translateY(-50%);
+  padding: 6px;
   border: 0;
   border-radius: 5px;
   background: transparent;
   color: #64748b;
+  font-size: .8rem;
   cursor: pointer;
 }
 
-.staff-login-card .staff-password-toggle:hover {
+.staff-signup-password-toggle:hover {
   background: #eff5ff;
   color: #2563eb;
 }
 
-.staff-password-toggle svg {
-  width: 18px;
-  height: 18px;
-  fill: none;
-  stroke: currentColor;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-width: 1.7;
+.staff-signup-password-toggle:focus-visible,
+.staff-signup-submit:focus-visible,
+.staff-signup-login a:focus-visible {
+  outline: 3px solid #bfdbfe;
+  outline-offset: 3px;
 }
 
-.staff-password-toggle:focus-visible {
-  outline: 2px solid #bfdbfe;
-  outline-offset: 2px;
+.staff-signup-error {
+  margin: 0;
+  color: #b91c1c;
+  font-size: .9rem;
 }
 
-.staff-login-card form button[type="submit"] {
+.staff-signup-submit {
   margin-top: 4px;
   padding: 13px 18px;
   border: 0;
@@ -119,37 +112,24 @@
   transition: background .18s ease, transform .18s ease;
 }
 
-.staff-login-card form button[type="submit"]:hover {
+.staff-signup-submit:hover {
   background: #1d4ed8;
   transform: translateY(-1px);
 }
 
-.staff-login-card form button[type="submit"]:focus-visible,
-.staff-login-toggle:focus-visible {
-  outline: 3px solid #bfdbfe;
-  outline-offset: 3px;
-}
-
-.staff-login-error {
-  margin: 0;
-  color: #b91c1c;
-  font-size: .9rem;
-}
-
-.staff-login-toggle {
-  display: block;
-  margin: 16px auto 0;
-  padding: 4px 8px;
-  border: 0;
-  background: transparent;
+.staff-signup-login {
+  margin: 18px 0 0;
   color: #64748b;
-  font: inherit;
-  font-size: .88rem;
-  cursor: pointer;
-  transition: color .18s ease;
+  font-size: .9rem;
+  text-align: center;
 }
 
-.staff-login-toggle:hover {
+.staff-signup-login a {
   color: #2563eb;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.staff-signup-login a:hover {
   text-decoration: underline;
 }

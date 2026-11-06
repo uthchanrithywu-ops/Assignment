@@ -6,7 +6,7 @@ import {
   Navigate
 } from "react-router-dom";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
 
 import Menu from "./components/Menu";
@@ -19,8 +19,9 @@ import Courses from "./pages/website/Courses.jsx";
 import Development from "./pages/website/Development.jsx";
 import NotFound from "./pages/website/NotFound.jsx";
 
-import Staff from "./pages/Staff_pages/Staff.jsx";
-import StaffLogin from "./pages/Staff_pages/StaffLogin.jsx";
+import Staff from "./pages/Staff_pages/Menustaff/Staff.jsx";
+import StaffLogin from "./pages/Staff_pages/stafflogin/StaffLogin.jsx";
+import StaffSignup from "./pages/Staff_pages/stafflogin/StaffSignup.jsx";
 
 
 function ScrollToTop() {
@@ -42,14 +43,39 @@ function ScrollToTop() {
   return null;
 }
 
+function readStaffSession() {
+  try {
+    return sessionStorage.getItem("staffLoggedIn") === "true";
+  } catch {
+    return false;
+  }
+}
+
+function PublicMenu() {
+  const { pathname } = useLocation();
+  return pathname.startsWith("/staff") ? null : <Menu />;
+}
+
 
 function App() {
+  const [staffLoggedIn, setStaffLoggedIn] = useState(readStaffSession);
+
+  function startStaffSession() {
+    sessionStorage.setItem("staffLoggedIn", "true");
+    setStaffLoggedIn(true);
+  }
+
+  function endStaffSession() {
+    sessionStorage.removeItem("staffLoggedIn");
+    setStaffLoggedIn(false);
+  }
+
   return (
     <HashRouter>
       <ScrollToTop />
 
       <div className="site-shell">
-        <Menu />
+        <PublicMenu />
 
         <main className="site-content">
           <Routes>
@@ -63,14 +89,19 @@ function App() {
 
             <Route
               path="/staff/login"
-              element={<StaffLogin />}
+              element={<StaffLogin onAuthenticated={startStaffSession} />}
+            />
+
+            <Route
+              path="/staff/signup"
+              element={<StaffSignup onAuthenticated={startStaffSession} />}
             />
 
             <Route
               path="/staff"
               element={
-                sessionStorage.getItem("staffLoggedIn") === "true"
-                  ? <Staff />
+                staffLoggedIn
+                  ? <Staff onLogout={endStaffSession} />
                   : <Navigate to="/staff/login" replace />
               }
             />

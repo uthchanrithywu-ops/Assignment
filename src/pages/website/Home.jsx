@@ -13,7 +13,7 @@ function Home() {
             <source src={heroVideo} type="video/mp4" />
           </video>
           <div className="hero-overlay" aria-hidden="true" />
-          <h1>IT School</h1>
+          <h1>RT University</h1>
           <p>
             Learn modern technology, build real-world projects, and develop
             the skills needed for a successful IT career.
@@ -35,7 +35,7 @@ function Home() {
         </header>
 
         <section className="intro">
-          <h2>Welcome to IT School</h2>
+          <h2>Welcome to RT University</h2>
           <p>
             We are committed to providing high-quality IT education that is
             simple, practical, and industry-focused.

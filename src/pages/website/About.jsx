@@ -40,7 +40,7 @@ function About() {
           </video>
           <div className="about-header-overlay" aria-hidden="true" />
           <span className="about-eyebrow">A place to build what’s next</span>
-          <h1>About IT School</h1>
+          <h1>About RT University</h1>
           <p>
             We make technology education practical, welcoming, and connected
             to the opportunities of tomorrow.
@@ -56,7 +56,7 @@ function About() {
             <div>
               <h2 id="about-story-title">Technology skills start with the right place to learn.</h2>
               <p>
-                IT School is a learning community for people ready to explore
+                Our university is a learning community for people ready to explore
                 the digital world. We bring core concepts and practical work
                 together so students can build confidence, create projects, and
                 prepare for a future in technology.
